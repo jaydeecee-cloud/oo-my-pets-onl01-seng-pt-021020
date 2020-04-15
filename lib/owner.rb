@@ -1,3 +1,4 @@
+require "pry"
 class Owner
   attr_accessor :cats, :dogs
   attr_reader :species, :name
@@ -54,6 +55,7 @@ class Owner
   end
   
   def list_pets
+    binding pry
     number_of_dogs = self.dogs.count
     number_of_cats = self.cats.count
     "I have #{dogs}dogs, and #{cats}cats"
