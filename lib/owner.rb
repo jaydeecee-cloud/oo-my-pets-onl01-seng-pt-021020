@@ -40,18 +40,25 @@ class Owner
     self.cats.each {|cat| cat.mood = "happy"}
   end
 
-  def sell_pets
-    self.cats.each do |cat|
-      self.cats.delete(cat)
-      cat.owner = nil
-      cat.mood = "nervous"
-    self.dogs.each do |dog|
-      self.dogs.delete(dog)
-      dog.owner = nil
-      dog.mood = "nervous"
+  # def sell_pets
+  #   self.cats.each do |cat|
+  #     self.cats.delete(cat)
+  #     cat.owner = nil
+  #     cat.mood = "nervous"
+  # end
+  #   self.dogs.each do |dog|
+  #     self.dogs.delete(dog)
+  #     dog.owner = nil
+  #     dog.mood = "nervous"
+  # end
+  
   def list_pets
     number_of_dogs = self.dogs.count
     number_of_cats = self.cats.count
+  end
+  
+  def self.reset_all
+    self.all.clear
   end
 end
 
