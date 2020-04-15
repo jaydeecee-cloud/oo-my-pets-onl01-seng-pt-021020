@@ -33,7 +33,7 @@ class Owner
   end
 
   def walk_dogs
-  self.dogs.each {|dog| dog.mood = "happy"}
+    self.dogs.each {|dog| dog.mood = "happy"}
   end
 
   def feed_cats
@@ -45,11 +45,12 @@ class Owner
       self.cats.delete(cat)
       cat.owner = nil
       cat.mood = "nervous"
-  end
+    end
     self.dogs.each do |dog|
       self.dogs.delete(dog)
       dog.owner = nil
       dog.mood = "nervous"
+    end
   end
   
   def list_pets
