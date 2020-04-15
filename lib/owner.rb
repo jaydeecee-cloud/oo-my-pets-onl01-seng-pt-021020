@@ -55,7 +55,6 @@ class Owner
   end
   
   def list_pets
-    binding pry
     number_of_dogs = self.dogs.count
     number_of_cats = self.cats.count
     "I have #{number_of_dogs}dogs, and #{number_of_cats}cats"
